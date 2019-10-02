@@ -1,0 +1,14 @@
+Upload an HTML/PHP file for the portal page here (leave blank to keep the current one).
+Make sure to include a form (POST to "$PORTAL_ACTION$") with a submit button (name="accept")
+and a hidden field with name="redirurl" and value="$PORTAL_REDIRURL$". Include the "auth_user"
+and "auth_pass" and/or "auth_voucher" input fields if authentication is enabled, otherwise it
+will always fail.
+Example code for the form:
+<form method="post" action="$PORTAL_ACTION$">
+   <input name="auth_user" type="text">
+   <input name="auth_pass" type="password">
+   <input name="auth_voucher" type="text">
+   <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+   <input name="zone" type="hidden" value="$PORTAL_ZONE$">
+   <input name="accept" type="submit" value="Continue">
+</form>
